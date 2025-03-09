@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/01 13:47:56 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/03/08 16:21:49 by yaperalt         ###   ########.fr       */
+/*   Created: 2025/02/28 00:17:20 by yaperalt          #+#    #+#             */
+/*   Updated: 2025/03/07 19:28:03 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int	main(int argc, char **argv)
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
+
+typedef struct s_stack
 {
+	s_stack	*next;
+}	t_stack;
 
-}
+
+#endif
