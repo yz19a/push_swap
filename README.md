@@ -42,7 +42,7 @@ The grade depends on how efficient the program's sorting process is.
   * 2 points for less than 10000
   * 1 point for less than 11500
 
-For the bonus part you must create your own checker.
+For the bonus part you must create your own checker, checking the number of actions your program used.
 
 
 ## Resources
