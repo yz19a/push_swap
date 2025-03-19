@@ -9,7 +9,7 @@ This project will make you sort data on a stack, with a limited set of instructi
 
 ## Push_Swap Rules and Grading
 
-The program is only allowed two stacks to work with, stack A and stack B. All the numbers are initially added to stack A, and B is empty.
+The program is only allowed two stacks to work with, stack A and stack B. All the numbers are initially added to stack A(without duplicates), and B is empty.
 
 The possible actions are:
 
@@ -41,6 +41,9 @@ The grade depends on how efficient the program's sorting process is.
   * 3 points for less than 8500
   * 2 points for less than 10000
   * 1 point for less than 11500
+
+For the bonus part you must create your own checker.
+
 
 ## Resources
 
