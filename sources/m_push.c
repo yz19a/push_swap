@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   m_push.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 12:25:39 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/03/16 16:56:15 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/03/19 15:53:38 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
  * @brief Moves top b node to top a node, first node in b as first node in a
  *
  * If b is empty, this function doesnt operate cause there is nothing to move
+ * @param boolean checks if a message must be displayed
  */
 void	pa(t_stack **stack_a, t_stack **stack_b, int boolean)
 {

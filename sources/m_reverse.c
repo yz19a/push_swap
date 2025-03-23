@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 12:26:01 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/03/19 14:20:53 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:20:35 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	rrb(t_stack **stack_b, int boolean)
 	t_stack	*last;
 
 	if (!stack_b || !(*stack_b) || !(*stack_b)->next)
-		return;
+		return ;
 	second_last = *stack_b;
 	while (second_last->next && second_last->next->next)
 		second_last = second_last->next;

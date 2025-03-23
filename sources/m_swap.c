@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   m_swap.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 12:25:11 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/03/16 16:04:39 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:19:11 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ void	sa(t_stack **stack_a, int boolean)
 	if (!stack_a || !(*stack_a) || !(*stack_a)->next)
 		return ;
 	else
-			temp = (*stack_a)->value;
-			(*stack_a)->value = (*stack_a)->next->value;
-			(*stack_a)->next->value = temp;
+	{
+		temp = (*stack_a)->value;
+		(*stack_a)->value = (*stack_a)->next->value;
+		(*stack_a)->next->value = temp;
+	}
 	if (boolean)
 		ft_putendl_fd("sa", 1);
 }
@@ -39,9 +41,11 @@ void	sb(t_stack **stack_b, int boolean)
 	if (!stack_b || !(*stack_b) || !(*stack_b)->next)
 		return ;
 	else
+	{
 		temp = (*stack_b)->value;
 		(*stack_b)->value = (*stack_b)->next->value;
 		(*stack_b)->next->value = temp;
+	}
 	if (boolean)
 		ft_putendl_fd("sb", 1);
 }

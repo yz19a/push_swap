@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   m_rotate.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 12:25:47 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/03/16 16:52:37 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:20:18 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ra(t_stack **stack_a, int boolean)
 {
 	t_stack	*old_head;
 	t_stack	*old_tail;
-	t_stack *new_head;
+	t_stack	*new_head;
 
 	if (!stack_a || !(*stack_a) || !(*stack_a)->next)
 		return ;
@@ -43,7 +43,7 @@ void	rb(t_stack **stack_b, int boolean)
 	t_stack	*old_tail;
 	t_stack	*new_head;
 
-	if(!stack_b || !(*stack_b) || !(*stack_b)->next)
+	if (!stack_b || !(*stack_b) || !(*stack_b)->next)
 		return ;
 	old_head = *stack_b;
 	old_tail = *stack_b;
