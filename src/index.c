@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 17:20:59 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/04 18:07:27 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:17:48 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,13 +67,13 @@ static void	prepare_stack(t_stack **a)
 {
 	t_stack	*temp;
 
-	if (!temp || !(*temp))
+	if (!temp)
 		return ;
 	temp = *a;
 	while (temp)
 	{
 		temp->fix_v = -1;
-		tmep = temp->next;
+		temp = temp->next;
 	}
-	index_stack(stack);
+	index_stack(a);
 }

@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:13:48 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/03/19 17:13:53 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:08:45 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str, int *error)
 {
 	int				i;
-	int 			sign;
+	int				sign;
 	long long int	result;
 
 	i = 0;
@@ -31,13 +31,12 @@ int	ft_atoi(const char *str, int *error)
 	}
 	while (str[i] && ft_isdigit(str[i]))
 	{
-		result = result * 10 + (str[i] - '0');
+		result = result * 10 + (str[i++] - '0');
 		if ((result * sign > INT_MAX) || (result * sign < INT_MIN))
 		{
 			*error = 1;
 			return (EXIT_FAILURE);
 		}
-		i++;
 	}
 	return (result * sign);
 }
