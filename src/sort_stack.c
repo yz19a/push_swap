@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sort_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/01 13:47:56 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/03/19 15:18:57 by yaperalt         ###   ########.fr       */
+/*   Created: 2025/03/23 17:14:02 by yaperalt          #+#    #+#             */
+/*   Updated: 2025/04/05 00:49:20 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdio.h>
 
-void	print_list(t_stack *stack)
+void	sort_stack(t_stack **a, t_stack **b)
 {
-	while (stack)
-	{
-		printf("%d\n", stack->value);
-		stack = stack->next;
-	}
-}
+	int	size_stack;
 
-int	main(int argc, char **argv)
-{
-	t_stack	*a;
-	t_stack	*b;
-
-	a = NULL;
-	b = NULL;
-	if (argc < 2)
-	{
-		correct_usage();
-		return (1);
-	}
-	parse_args(&a, argc, argv);
-	print_list(a);
-	free_list(a);
-	return (EXIT_SUCCESS);
+	if (!a || !(*a) || !(is_sorted(*a)))
+		return ;
+	prepare_stack(a);
+	size = stack_size(*a);
+	if (size == 2)
+		sort_two(a);
+	else if (size == 3)
+		sort_three(a);
+	else if (size == 4 || size == 5)
+		sort_four_five(a, b, size);
+	else
+		radix_sort(a, b);
 }

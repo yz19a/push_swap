@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 00:17:20 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/03/20 21:08:24 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/03 22:14:43 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	correct_usage(void);
 int		ft_isdigit(int c);
 int		ft_isspace(int c);
 
-// utils.c
+// utils2.c
 int		ft_atoi(const char *str, int *error);
 int		is_valid_number(const char *str);
 int		has_duplicate(t_stack *name, int value);
@@ -43,5 +43,28 @@ void	free_list(t_stack *head);
 // check_args.c
 void	*process_token(t_stack **stack, char *token);
 void	parse_args(t_stack **stack, int argc, char **argv);
+
+// m_swap.c
+void	sa(t_stack **stack_a, int boolean);
+void	sb(t_stack **stack_b, int boolean);
+void	ss(t_stack **stack_a, t_stack **stack_b, int boolean);
+
+// m_push.c
+void	pa(t_stack **stack_a, t_stack **stack_b, int boolean);
+void	pb(t_stack **stack_a, t_stack **stack_b, int boolean);
+
+// m_rotate.c
+void	ra(t_stack **stack_a, int boolean);
+void	rb(t_stack **stack_b, int boolean);
+void	rr(t_stack **stack_a, t_stack **stack_b, int boolean);
+
+// m_reverse.c
+void	rra(t_stack **stack_a, int boolean);
+void	rrb(t_stack **stack_b, int boolean);
+void	rrr(t_stack **stack_a, t_stack **stack_b, int boolean);
+
+// algorithm.c
+int	is_sorted(t_stack *stack);
+int	stack_size(t_stack *stack);
 
 #endif
