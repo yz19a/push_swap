@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 13:47:56 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 18:41:27 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 18:49:09 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc < 2)
 	{
-		correct_usage();
+		write(2, "Error\n", 6);
 		return (1);
 	}
 	parse_args(&a, argc, argv);

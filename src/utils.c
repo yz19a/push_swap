@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 12:24:00 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 18:43:38 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 18:48:24 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,6 @@ void	ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	ft_putchar_fd('\n', fd);
-}
-
-void	correct_usage(void)
-{
-	ft_putendl_fd("\n\n=============== PUSH_SWAP =================\n", 2);
-	ft_putendl_fd("  No valid arguments provided...\n", 2);
-	ft_putendl_fd("  This program accepts integers as arguments,", 2);
-	ft_putendl_fd("  integers must be separated with white-spaces,", 2);
-	ft_putendl_fd("  minimum of -2,147,483,648 and maximum of ", 2);
-	ft_putendl_fd("  2,147,483,647.\n", 2);
-	ft_putendl_fd("  At least you must introduce one integer.\n", 2);
-	ft_putendl_fd("===========================================\n", 2);
 }
 
 int	ft_isdigit(int c)
