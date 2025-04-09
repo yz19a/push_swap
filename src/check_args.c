@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:19:08 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 17:24:46 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 18:12:14 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ void	parse_args(t_stack **stack, int argc, char **argv)
 	int		j;
 	char	*token;
 
-	i = 1;
-	while (i < argc)
+	i = argc - 1;
+	while (i > 0)
 	{
 		j = 0;
 		while (argv[i][j])
@@ -57,6 +57,6 @@ void	parse_args(t_stack **stack, int argc, char **argv)
 				argv[i][j] = '\0';
 			process_token(stack, token);
 		}
-		i++;
+		i--;
 	}
 }

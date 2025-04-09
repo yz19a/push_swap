@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 13:47:56 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 17:25:03 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 18:21:22 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	parse_args(&a, argc, argv);
-	if (!is_sorted(a))
-		sort_stack(&a, &b);
+	sort_stack(&a, &b);
 	free_list(a);
 	free_list(b);
 	return (EXIT_SUCCESS);

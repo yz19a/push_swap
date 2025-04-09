@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 12:55:53 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 17:25:17 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 18:05:56 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,20 @@ void	radix_sort(t_stack **a, t_stack **b)
 	}
 }
 
-int	is_sorted(t_stack *stack)
+int	is_sorted(t_stack *node)
 {
-	if (!stack)
+	int	prev;
+
+	if (!node || !node->next)
 		return (1);
-	while (stack->next)
+	prev = node->value;
+	node = node->next;
+	while (node)
 	{
-		if (stack->value > stack->next->value)
+		if (prev > node->value)
 			return (0);
-		stack = stack->next;
+		prev = node->value;
+		node = node->next;
 	}
 	return (1);
 }
