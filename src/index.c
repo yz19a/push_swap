@@ -6,10 +6,20 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 17:20:59 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 17:17:48 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:23:04 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../include/push_swap.h"
+
+/**
+ $	stack: Pointer to the pointer to the top node of the stack (t_stack **).​
+ $
+ $	*stack: Pointer to the top node of the stack (t_stack *).​
+ $
+ $ 	**stack: The top node itself (t_stack).​
+ $
+ */
 #include "../include/push_swap.h"
 
 /**
@@ -58,16 +68,16 @@ void	index_stack(t_stack **a)
 	current = *a;
 	while (current)
 	{
-		assign_next_index(a, index++);
 		current = current->next;
+		assign_next_index(a, index++);
 	}
 }
 
-static void	prepare_stack(t_stack **a)
+void	prepare_stack(t_stack **a)
 {
 	t_stack	*temp;
 
-	if (!temp)
+	if (!a || !*a)
 		return ;
 	temp = *a;
 	while (temp)

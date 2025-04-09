@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 00:17:20 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/03 22:14:43 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:21:38 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 
 typedef struct s_stack
 {
-	int		value;
-	int		fix_v;
+	int				value;
+	int				fix_v;
 	struct s_stack	*prev;
 	struct s_stack	*next;
 }	t_stack;
@@ -64,7 +64,22 @@ void	rrb(t_stack **stack_b, int boolean);
 void	rrr(t_stack **stack_a, t_stack **stack_b, int boolean);
 
 // algorithm.c
-int	is_sorted(t_stack *stack);
-int	stack_size(t_stack *stack);
+int		is_sorted(t_stack *stack);
+int		stack_size(t_stack *stack);
+int		find_max(t_stack *stack);
+void	radix_sort(t_stack **a, t_stack **b);
+
+// index.c
+void	assign_next_index(t_stack **a, int index);
+void	index_stack(t_stack **a);
+void	prepare_stack(t_stack **a);
+
+// sort_utils.c
+void	sort_two(t_stack **a);
+void	sort_three(t_stack **a);
+void	sort_four_five(t_stack **a, t_stack **b, int size);
+
+// sort_stack.c
+void	sort_stack(t_stack **a, t_stack **b);
 
 #endif

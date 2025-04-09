@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:19:08 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 17:06:55 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:24:46 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*process_token(t_stack **stack, char *token)
 		free_list(*stack);
 		exit(EXIT_FAILURE);
 	}
-	add_node(stack, num);
+	return (add_node(stack, num));
 }
 
 void	parse_args(t_stack **stack, int argc, char **argv)
@@ -53,7 +53,8 @@ void	parse_args(t_stack **stack, int argc, char **argv)
 			token = &argv[i][j];
 			while (argv[i][j] && !ft_isspace(argv[i][j]))
 				j++;
-			argv[i][j] = '\0';
+			if (argv[i][j])
+				argv[i][j] = '\0';
 			process_token(stack, token);
 		}
 		i++;

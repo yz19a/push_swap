@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 12:55:53 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 17:16:01 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/09 17:25:17 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	stack_size(t_stack *stack)
 
 int	find_max(t_stack *stack)
 {
-	int max;
+	int	max;
 
 	if (!stack)
 		return (0);
