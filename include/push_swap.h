@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 00:17:20 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 18:48:37 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:39:43 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	prepare_stack(t_stack **a);
 // sort_utils.c
 void	sort_two(t_stack **a);
 void	sort_three(t_stack **a);
-void	sort_four_five(t_stack **a, t_stack **b, int size);
+void	sort_four_five(t_stack **a, t_stack **b);
 
 // sort_stack.c
 void	sort_stack(t_stack **a, t_stack **b);

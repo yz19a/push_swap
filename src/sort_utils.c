@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 17:12:06 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 17:57:02 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:43:41 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,22 +69,26 @@ static int	find_min_position(t_stack *stack)
 	return (min_pos);
 }
 
-void	sort_four_five(t_stack **a, t_stack **b, int size)
+void	sort_four_five(t_stack **a, t_stack **b)
 {
-	int	pushed;
 	int	min_pos;
+	int	size;
 
-	pushed = 0;
-	while (pushed < size - 3)
+	while (stack_size(*a) > 3)
 	{
 		min_pos = find_min_position(*a);
-		while (min_pos > 0)
+		size = stack_size(*a);
+		if (min_pos <= size / 2)
 		{
-			ra(a, 1);
-			min_pos--;
+			while (min_pos-- > 0)
+				ra(a, 1);
+		}
+		else
+		{
+			while (min_pos++ < size)
+				rra(a, 1);
 		}
 		pb(a, b, 1);
-		pushed++;
 	}
 	sort_three(a);
 	while (*b)

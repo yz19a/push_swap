@@ -6,7 +6,7 @@
 /*   By: yaperalt <yaperalt@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/23 17:14:02 by yaperalt          #+#    #+#             */
-/*   Updated: 2025/04/09 18:07:47 by yaperalt         ###   ########.fr       */
+/*   Updated: 2025/04/10 01:39:36 by yaperalt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	sort_stack(t_stack **a, t_stack **b)
 	else if (size_stack == 3)
 		sort_three(a);
 	else if (size_stack == 4 || size_stack == 5)
-		sort_four_five(a, b, size_stack);
+		sort_four_five(a, b);
 	else
 		radix_sort(a, b);
 }
